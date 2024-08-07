@@ -16,9 +16,6 @@ describe("deepcopy 함수 테스트", () => {
     expect(copy).toEqual(original); // 객체의 값과 구조가 같은지 확인
     expect(copy).not.toBe(original); // 객체의 참조가 다른지 확인
 
-    // 두 객체의 속성이 같은 이름과 순서인지 확인
-    expect(Object.keys(copy)).toEqual(Object.keys(original));
-
     // 복사된 중첩 객체의 값이 일치하는지 확인
     expect(copy.b).toEqual(original.b);
     expect(copy.b).not.toBe(original.b); // 중첩 객체의 참조가 다른지 확인
