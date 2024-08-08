@@ -71,30 +71,4 @@ describe("deepcopy 함수 - 깊은 복사 테스트 ", () => {
     expect(copy[2].a).toEqual(original[2].a);
     expect(copy[2].a).not.toBe(original[2].a); // 중첩 객체의 내부 객체 참조가 다른지 확인
   });
-
-  // test("객체의 프로토타입 체인을 깊은 복사한다.", () => {
-  //   // 생성자 함수를 정의
-  //   function Parent() {}
-  //   Parent.prototype.method = function () {
-  //     return "method from Parent";
-  //   };
-
-  //   // Parent를 프로토타입으로 가지는 original 객체 생성
-  //   const original = Object.create(new Parent());
-  //   original.a = 1;
-
-  //   const copy = deepcopy(original);
-
-  //   expect(copy).toEqual(original); // 객체의 값과 구조가 같은지 확인
-  //   expect(copy).not.toBe(original); // 객체의 참조가 다른지 확인
-
-  //   // 복사된 객체와 원본 객체가 같은 프로토타입 체인을 가지는지 확인
-  //   expect(Object.getPrototypeOf(copy)).toEqual(
-  //     Object.getPrototypeOf(original)
-  //   );
-  //   expect(Object.getPrototypeOf(copy)).not.toBe(null);
-
-  //   // 복사된 객체의 메서드가 원본 메서드와 동일하게 동작하는지 확인
-  //   expect(copy.method()).toBe(original.method());
-  // });
 });
