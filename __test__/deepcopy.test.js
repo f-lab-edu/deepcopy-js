@@ -4,35 +4,35 @@ describe("deepcopy 함수 테스트", () => {
   describe("원시 타입(Primitive Types) 복사", () => {
     test("number 타입을 복사한다.", () => {
       const original = 15;
-      const copy = original;
+      const copy = deepcopy(original);
 
       expect(copy).toBe(original);
     });
 
     test("string 타입을 복사한다.", () => {
       const original = "hello";
-      const copy = original;
+      const copy = deepcopy(original);
 
       expect(copy).toBe(original);
     });
 
     test("boolean 타입을 복사한다.", () => {
       const original = true;
-      const copy = original;
+      const copy = deepcopy(original);
 
       expect(copy).toBe(original);
     });
 
     test("null을 복사한다.", () => {
       const original = null;
-      const copy = original;
+      const copy = deepcopy(original);
 
       expect(copy).toBeNull();
     });
 
     test("undefined를 복사한다.", () => {
       const original = undefined;
-      const copy = original;
+      const copy = deepcopy(original);
 
       expect(copy).toBeUndefined();
     });
